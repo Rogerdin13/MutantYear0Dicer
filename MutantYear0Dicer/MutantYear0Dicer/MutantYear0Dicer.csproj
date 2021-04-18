@@ -16,7 +16,6 @@
     <EmbeddedResource Include="Assets\Images\biohazard.png" />
     <EmbeddedResource Include="Assets\Images\dicer_logo.png" />
     <EmbeddedResource Include="Assets\Images\explosion.png" />
-    <EmbeddedResource Include="Assets\Images\mutant_logo.png" />
     <EmbeddedResource Include="Assets\Images\radioactive.png" />
   </ItemGroup>
 
