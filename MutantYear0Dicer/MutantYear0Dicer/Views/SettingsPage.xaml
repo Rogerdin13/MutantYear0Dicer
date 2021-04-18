@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MutantYear0Dicer.Views.SettingsPage"
+             BackgroundColor="#000000">
+
+    <NavigationPage.TitleView>
+        <Image Grid.Column="1"
+               Source="{Binding HeaderLogo}"
+               Margin="0,0,7,0"
+               HeightRequest="50"
+               WidthRequest="-1"
+               BackgroundColor="Transparent"
+               HorizontalOptions="End"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout Padding="7">
+        <Grid Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+                   Text="Dicing Duration:"
+                   TextColor="#ffffff"
+                   FontSize="22"
+                   VerticalOptions="Center"/>
+            <Entry Grid.Column="1"
+                   AutomationId="duration"
+                   Placeholder="{Binding DurationValue}" 
+                   PlaceholderColor="#6f00dd00"
+                   TextColor="#ffffff"
+                   FontSize="22"
+                   Unfocused="Entry_Unfocused"
+                   VerticalOptions="Center"
+                   BackgroundColor="#22dddddd"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+                   Text="Rolling Frequenzy:"
+                   TextColor="#ffffff"
+                   FontSize="22"
+                   VerticalOptions="Center"/>
+            <Entry Grid.Column="1"
+                   AutomationId="frequenzy"
+                   Placeholder="{Binding FrequenzyValue}" 
+                   PlaceholderColor="#6f00dd00"
+                   TextColor="#ffffff"
+                   FontSize="22"
+                   Unfocused="Entry_Unfocused"
+                   VerticalOptions="Center"
+                   BackgroundColor="#22dddddd"/>
+        </Grid>
+        <Button Text="Reset Values"
+                Margin="0,25,0,0"
+                FontSize="18"
+                TextColor="#ffffff"
+                BackgroundColor="#8a6000"
+                CornerRadius="7"
+                HorizontalOptions="Center"
+                Padding="17,0,17,0"
+                Command="{Binding SetDefaultValuesCommand}"/>
+        <Label Text="INFO:&#x0a;- both values are in milliseconds&#x0a;- current values are displayed in green&#x0a;- saving is done in leaving the entry field&#x0a;&#x0a;DURATION:&#x0a;how long does the dice take to show final value&#x0a;&#x0a;FREQUENZY:&#x0a;how frequent does the value change while rolling" 
+               TextColor="#ccaa00"
+               FontSize="18"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="Center"
+               Margin="0,50,0,0"/>
+    </StackLayout>
+
+</ContentPage>

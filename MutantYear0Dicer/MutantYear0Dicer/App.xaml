@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             x:Class="MutantYear0Dicer.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <!-- COLORS -->
+            <Color x:Key="RadioactiveDiceColor">#396935</Color>
+            <Color x:Key="BiohazardDiceColor">#8D7D42</Color>
+            <Color x:Key="ExplosionDiceColor">#9B937C</Color>
+            
+            <!-- STYLES -->
+            <Style x:Key="MenuPageButton" TargetType="Button" >
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="#ffffff"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="DiceIconStyle" TargetType="Image">
+                <Setter Property="Margin" Value="35,0,0,0"/>
+                <Setter Property="HeightRequest" Value="150"/>
+                <Setter Property="WidthRequest" Value="150"/>
+            </Style>
+
+            <Style x:Key="DiceValueStyle" TargetType="Label">
+                <Setter Property="Margin" Value="-20,0,0,0"/>
+                <Setter Property="TextColor" Value="#ffffff"/>
+                <Setter Property="FontSize" Value="72"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</prism:PrismApplication>

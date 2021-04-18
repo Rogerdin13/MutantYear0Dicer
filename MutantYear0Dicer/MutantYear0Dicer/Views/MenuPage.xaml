@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="http://prismlibrary.com"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="MutantYear0Dicer.Views.MenuPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu"
+                     BackgroundColor="#8a6000">
+            <Grid Padding="20"
+                  Margin="0,40,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Frame BackgroundColor="#000000"
+                           BorderColor="#000000"
+                           Padding="3"
+                           CornerRadius="13">
+                        <Frame BackgroundColor="#8a6000"
+                               BorderColor="#000000"                               
+                               Padding="0"
+                               CornerRadius="10">
+                            <Button Text="DICER" 
+                                    Style="{StaticResource MenuPageButton}" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="DicerPage" />
+                        </Frame>
+                    </Frame>
+                    <Frame BackgroundColor="#000000"
+                           BorderColor="#000000"
+                           Padding="3"
+                           CornerRadius="13">
+                        <Frame BackgroundColor="#8a6000"
+                               BorderColor="#000000"                               
+                               Padding="0"
+                               CornerRadius="10">
+                            <Button Text="SETTINGS" 
+                                    Style="{StaticResource MenuPageButton}" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="SettingsPage" />
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+                <Image Grid.Row="1"
+                       Source="{Binding MutantLogo}"/>
+            </Grid>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+</MasterDetailPage>

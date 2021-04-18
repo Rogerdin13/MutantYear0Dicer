@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MutantYear0Dicer.Views.DicerPage"
+             BackgroundColor="#000000">
+
+    <NavigationPage.TitleView>
+        <Image Grid.Column="1"
+               Source="{Binding HeaderLogo}"
+               Margin="0,0,7,0"
+               HeightRequest="50"
+               WidthRequest="-1"
+               BackgroundColor="Transparent"
+               HorizontalOptions="End"/>
+    </NavigationPage.TitleView>
+
+    <Grid Padding="7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="0"
+                     BackgroundColor="{StaticResource RadioactiveDiceColor}">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding RollDiceCommand}"
+                                      CommandParameter="radioactive"
+                                      NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+            <Image Source="{Binding RadioactiveImageSource}"
+                   Style="{StaticResource DiceIconStyle}"/>
+            <Label Text="{Binding RadioDiceValue}"
+                   Style="{StaticResource DiceValueStyle}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="1"
+                     BackgroundColor="{StaticResource BiohazardDiceColor}">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding RollDiceCommand}"
+                                      CommandParameter="biohazard"
+                                      NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+            <Image Source="{Binding BiohazardImageSource}"
+                   Style="{StaticResource DiceIconStyle}"/>
+            <Label Text="{Binding BioDiceValue}"
+                   Style="{StaticResource DiceValueStyle}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="2"
+                     BackgroundColor="{StaticResource ExplosionDiceColor}">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding RollDiceCommand}"
+                                      CommandParameter="explosion"
+                                      NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+            <Image Source="{Binding ExplosionImageSource}"
+                   Style="{StaticResource DiceIconStyle}"/>
+            <Label Text="{Binding ExplosionDiceValue}"
+                   Style="{StaticResource DiceValueStyle}"/>
+        </StackLayout>
+    </Grid>
+  
+</ContentPage>
